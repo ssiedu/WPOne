@@ -8,15 +8,19 @@ public class BankingApp {
 		ac1.setData(111, "AAA", 10000);
 		ac2.setData(112, "BBB", 20000);
 		ac3.setData(113, "CCC", 30000);
-		/*ac1.showData();
+		ac1.showData();
 		ac2.showData();
 		ac3.showData();
-		ac1.withdraw(15000);*/
-		//ac1.deposit(50000);
-		//ac2.deposit(20000);
-		//ac3.deposit(10000);
+		System.out.println("________________________________________");
+		ac1.deposit(5000);
+		ac2.deposit(3000);
+		ac3.deposit(2000);
+		ac1.showData();
+		ac2.showData();
+		ac3.showData();
+		System.out.println("________________________________________");
+		Account.showTotalDeposits();
 		
-
 	}
 
 }
