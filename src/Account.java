@@ -7,6 +7,24 @@ public class Account
 	private int balance;
 	private static int totalDeposits;
 	
+	public static void showAvg(Account tmp1, Account tmp2, Account tmp3, Account tmp4) {
+		System.out.println("Avg of 4: "+(tmp1.balance+tmp2.balance+tmp3.balance+tmp4.balance)/4);
+		//tmp2.balance++;
+	}
+	public static void showAvg(Account tmp1, Account tmp2, Account tmp3) {
+		System.out.println("Avg of 3 : "+(tmp1.balance+tmp2.balance+tmp3.balance)/3);
+		//tmp2.balance++;
+	}
+	public static void showAvg(Account tmp1, Account tmp2) {
+		System.out.println("Avg of 2 : "+(tmp1.balance+tmp2.balance)/2);
+		//tmp2.balance++;
+	}
+	
+	public static void showData(Account tmp)
+	{
+		System.out.println(tmp.ano+","+tmp.name+","+tmp.balance);
+	}
+	
 	public static boolean isValidAmountForDeposit(int amountToCheck) {
 		return amountToCheck>=500;
 	}
@@ -42,12 +60,12 @@ public class Account
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
-	public void withdraw(int amount) {
-		if(balance>=amount) {
-			System.out.println("Transaction Allowed For "+ano);
-			balance=balance-amount;
+	public static void withdraw(Account tmp,int amount) {
+		if(tmp.balance>=amount) {
+			System.out.println("Transaction Allowed For "+tmp.ano);
+			tmp.balance=tmp.balance-amount;
 		}else {
-			System.out.println("Insufficient Balance In "+ano);
+			System.out.println("Insufficient Balance In "+tmp.ano);
 		}
 	}
 	public void setData(int a, String b, int c)
@@ -56,8 +74,5 @@ public class Account
 		name=b;
 		balance=c;
 	}
-	public void showData()
-	{
-		System.out.println(ano+","+name+","+balance);
-	}
+
 }
