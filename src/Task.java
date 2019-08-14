@@ -1,4 +1,21 @@
 /*
+ * 1) Add a constructor in account class to initialize
+ *    ano and name only.
+ *    	Account ac1=new Account(111,"AAA");
+ * 2) Add another constructor in Account class to 
+ *    initialize all the members. Take the help of two arg
+ *    constructor to initialize ano,name
+ * 3) Write some code to have a count on number of account
+ *    objects created yet. 
+ * 
+ * 
+ * 
+ */
+
+
+
+
+/*
  * 1) write display method to print balances of n accounts
  * 		display(ac1,ac2,ac3);
  * 

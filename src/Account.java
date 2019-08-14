@@ -6,7 +6,40 @@ public class Account
 	private String name;
 	private int balance;
 	private static int totalDeposits;
+					
+	public Account(Account tmp) {
+		ano=tmp.ano;
+		name=tmp.name;
+		balance=tmp.balance;
+
+	}
 	
+	public Account(int a, String b, int c) {
+		ano=a; name=b; balance=c;
+	}
+	
+	
+	
+	public static void display(Account...tmp) {
+		
+		for(int i=0; i<tmp.length; i++) {
+			System.out.println(tmp[i].ano+","+tmp[i].name+","+tmp[i].balance);
+		}
+		/*
+		for(Account account:tmp) {
+			System.out.println(account.ano+"==>"+account.balance);
+		}*/
+	}
+	public static void showAvg(Account...tmp) {
+		int total=0;
+		for(Account ac:tmp) {
+			total=total+ac.balance;
+		}
+		int n=tmp.length;
+		System.out.println("Avg of "+n+" : " + (total/n));
+		
+	}
+	/*
 	public static void showAvg(Account tmp1, Account tmp2, Account tmp3, Account tmp4) {
 		System.out.println("Avg of 4: "+(tmp1.balance+tmp2.balance+tmp3.balance+tmp4.balance)/4);
 		//tmp2.balance++;
@@ -19,7 +52,7 @@ public class Account
 		System.out.println("Avg of 2 : "+(tmp1.balance+tmp2.balance)/2);
 		//tmp2.balance++;
 	}
-	
+	*/
 	public static void showData(Account tmp)
 	{
 		System.out.println(tmp.ano+","+tmp.name+","+tmp.balance);
