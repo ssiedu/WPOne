@@ -1,28 +1,50 @@
 
 public class Demo {
-	int x;
-	
-	public static void change(Demo obj) {
-		obj.x++;
+
+	private int x, y = 5;
+
+	public Demo(int a, int b) {
+		x = a;
+		y = b;
 	}
-	public static void change(int fp) {
-		fp++;
+
+	public void show() {
+		int x=55;
+		System.out.println(this.x + "," + y);
 	}
+
 	public static void main(String[] args) {
 		
-		Demo d1=new Demo();
-		d1.x=10;
-		System.out.println(d1.x);
-		change(d1);
-		System.out.println(d1.x);
+		Demo d1=new Demo(10,20);
+		Demo d2=new Demo(30,40);
+		Demo d3=new Demo(50,60);
+		d1.show();
+		d2.show();
+		d3.show();
 		
-		/*int ap=10;
-		System.out.println(ap);
-		change(ap);
-		System.out.println("After Call : ");
-		System.out.println(ap);*/
-		
+		/*Demo d1;
+		new Demo(10, 20);
+		Demo d2 = new Demo(30, 40);
+		Demo d3 = d2;
+		d1 = d2;
+		d1.show();
+		d2.show();
+		d3.show();
+		d3 = new Demo(50, 60);
+		System.out.println("______________________________________");
+		d1.show();
+		d2.show();
+		d3.show();
+		System.out.println("______________________________________");
+		d2 = d3;
+		d1.show();
+		d2.show();
+		d3.show();
+		System.out.println("______________________________________");
+		d1 = new Demo(70, 80);
 
-	}
+		//
+
+*/	}
 
 }
