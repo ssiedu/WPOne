@@ -7,6 +7,13 @@ public class Account
 	private int balance;
 	private static int totalDeposits;
 					
+	
+	public boolean equals(Account ac) {
+		return this.balance==ac.balance;
+	}
+	
+	
+	
 	public Account(Account tmp) {
 		ano=tmp.ano;
 		name=tmp.name;
@@ -107,5 +114,5 @@ public class Account
 		name=b;
 		balance=c;
 	}
-
+	
 }
